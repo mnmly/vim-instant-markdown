@@ -1,0 +1,1 @@
+../javascript/instant-preview.vim
