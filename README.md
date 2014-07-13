@@ -2,7 +2,7 @@ vim-instant-preview
 ====================
 
 Heavily based on [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
-This plugin works only when you run [instant-preview-server](https://github.com/mnmly/instnat-preview-server)
+This plugin works only when you run [instant-preview-server](https://github.com/mnmly/instant-preview-server)
 
 Installation
 ------------
