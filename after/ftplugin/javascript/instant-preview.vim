@@ -18,8 +18,13 @@ function! s:system(cmd, stdin)
 endfu
 
 function! s:refreshView()
+    let preview_port = $PREVIEW_PORT
+    if !preview_port
+      let preview_port = 8090
+    endif
+
     let bufnr = expand('<bufnr>')
-    call s:system("curl -X PUT -T - http://localhost:8090/ &>/dev/null &",
+    call s:system("curl -X PUT --ipv4 -T - http://localhost:" . preview_port . "/ &>/dev/null &",
                 \ expand('%:p') . '----------'. s:bufGetContents(bufnr))
 endfu
 
